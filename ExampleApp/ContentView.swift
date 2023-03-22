@@ -17,6 +17,10 @@ struct ContentView: View {
                                  "view": "ContentView",
                                  "event_id": "BTN01"])
             }
+            Button("Crash it!") {
+                let array = [0,1,2]
+                let _ = array[3]
+            }
         }
         .padding()
     }

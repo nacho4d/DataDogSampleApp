@@ -8,7 +8,7 @@
 import Foundation
 import Datadog
 
-///
+/// Logger and Crash report getter tool for analysis
 class AnalyticsLogger {
 
     static let instance = AnalyticsLogger()
@@ -17,16 +17,16 @@ class AnalyticsLogger {
 
     /// Initializer
     init() {
-        // api key: 60caedc26cc7b62050b849c4329b51b7
-        // client token: pubed3be2390dd2fa9005ee53d614252ce3
+        /// Initialize Datadog
         Datadog.initialize(
             appContext: .init(),
-            trackingConsent: TrackingConsent.granted,
+            trackingConsent: .granted,
             configuration: Datadog.Configuration
                 .builderUsing(clientToken: SecretsVault.current.datadogClientToken, environment: "dev1")
                 .build()
         )
 
+        /// Initialize logger
         ddLogger = DDLogger.builder
             .sendNetworkInfo(true)
             .sendLogsToDatadog(true)

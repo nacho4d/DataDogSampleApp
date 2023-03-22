@@ -13,8 +13,7 @@
 		4F33E0AA29C0AFED005EB5D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F33E0A929C0AFED005EB5D2 /* Preview Assets.xcassets */; };
 		4F33E0B429C0B115005EB5D2 /* AnalyticsLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33E0B329C0B115005EB5D2 /* AnalyticsLogger.swift */; };
 		4F33E0B629C0B517005EB5D2 /* SecretsVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33E0B529C0B517005EB5D2 /* SecretsVault.swift */; };
-		4F33E0B929C0B8E7005EB5D2 /* Datadog in Frameworks */ = {isa = PBXBuildFile; productRef = 4F33E0B829C0B8E7005EB5D2 /* Datadog */; };
-		4F33E0BB29C0B8E7005EB5D2 /* Datadog in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 4F33E0B829C0B8E7005EB5D2 /* Datadog */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4FBB7A3F29C9ECBD0057D822 /* DatadogStatic in Frameworks */ = {isa = PBXBuildFile; productRef = 4FBB7A3E29C9ECBD0057D822 /* DatadogStatic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +23,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4F33E0BB29C0B8E7005EB5D2 /* Datadog in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,13 +30,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4F33E09F29C0AFEC005EB5D2 /* DataDogExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataDogExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F33E09F29C0AFEC005EB5D2 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F33E0A229C0AFEC005EB5D2 /* ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApp.swift; sourceTree = "<group>"; };
 		4F33E0A429C0AFEC005EB5D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4F33E0A629C0AFED005EB5D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F33E0A929C0AFED005EB5D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F33E0B329C0B115005EB5D2 /* AnalyticsLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsLogger.swift; sourceTree = "<group>"; };
 		4F33E0B529C0B517005EB5D2 /* SecretsVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretsVault.swift; sourceTree = "<group>"; };
+		4FBB7A5B29C9F1680057D822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F33E0B929C0B8E7005EB5D2 /* Datadog in Frameworks */,
+				4FBB7A3F29C9ECBD0057D822 /* DatadogStatic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +64,7 @@
 		4F33E0A029C0AFEC005EB5D2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F33E09F29C0AFEC005EB5D2 /* DataDogExampleApp.app */,
+				4F33E09F29C0AFEC005EB5D2 /* ExampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +72,7 @@
 		4F33E0A129C0AFEC005EB5D2 /* ExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				4FBB7A5B29C9F1680057D822 /* Info.plist */,
 				4F33E0A229C0AFEC005EB5D2 /* ExampleApp.swift */,
 				4F33E0A429C0AFEC005EB5D2 /* ContentView.swift */,
 				4F33E0A629C0AFED005EB5D2 /* Assets.xcassets */,
@@ -101,9 +101,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4F33E09E29C0AFEC005EB5D2 /* DataDogExampleApp */ = {
+		4F33E09E29C0AFEC005EB5D2 /* ExampleApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F33E0AD29C0AFED005EB5D2 /* Build configuration list for PBXNativeTarget "DataDogExampleApp" */;
+			buildConfigurationList = 4F33E0AD29C0AFED005EB5D2 /* Build configuration list for PBXNativeTarget "ExampleApp" */;
 			buildPhases = (
 				4F33E09B29C0AFEC005EB5D2 /* Sources */,
 				4F33E09C29C0AFEC005EB5D2 /* Frameworks */,
@@ -114,12 +114,12 @@
 			);
 			dependencies = (
 			);
-			name = DataDogExampleApp;
+			name = ExampleApp;
 			packageProductDependencies = (
-				4F33E0B829C0B8E7005EB5D2 /* Datadog */,
+				4FBB7A3E29C9ECBD0057D822 /* DatadogStatic */,
 			);
 			productName = DataDogExampleApp;
-			productReference = 4F33E09F29C0AFEC005EB5D2 /* DataDogExampleApp.app */;
+			productReference = 4F33E09F29C0AFEC005EB5D2 /* ExampleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -147,13 +147,13 @@
 			);
 			mainGroup = 4F33E09629C0AFEC005EB5D2;
 			packageReferences = (
-				4F33E0B029C0B06F005EB5D2 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */,
+				4F573BAF29C9E917005B0804 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */,
 			);
 			productRefGroup = 4F33E0A029C0AFEC005EB5D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4F33E09E29C0AFEC005EB5D2 /* DataDogExampleApp */,
+				4F33E09E29C0AFEC005EB5D2 /* ExampleApp */,
 			);
 		};
 /* End PBXProject section */
@@ -306,10 +306,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DataDogExampleApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ExampleApp/Preview Content\"";
+				DEVELOPMENT_TEAM = Z2DF73ZW2D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = ExampleApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -334,10 +335,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DataDogExampleApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ExampleApp/Preview Content\"";
+				DEVELOPMENT_TEAM = Z2DF73ZW2D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = ExampleApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -367,7 +369,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F33E0AD29C0AFED005EB5D2 /* Build configuration list for PBXNativeTarget "DataDogExampleApp" */ = {
+		4F33E0AD29C0AFED005EB5D2 /* Build configuration list for PBXNativeTarget "ExampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4F33E0AE29C0AFED005EB5D2 /* Debug */,
@@ -379,7 +381,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4F33E0B029C0B06F005EB5D2 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */ = {
+		4F573BAF29C9E917005B0804 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Datadog/dd-sdk-ios.git";
 			requirement = {
@@ -390,10 +392,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4F33E0B829C0B8E7005EB5D2 /* Datadog */ = {
+		4FBB7A3E29C9ECBD0057D822 /* DatadogStatic */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4F33E0B029C0B06F005EB5D2 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */;
-			productName = Datadog;
+			package = 4F573BAF29C9E917005B0804 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */;
+			productName = DatadogStatic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
