@@ -14,6 +14,7 @@
 		4F33E0B429C0B115005EB5D2 /* AnalyticsLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33E0B329C0B115005EB5D2 /* AnalyticsLogger.swift */; };
 		4F33E0B629C0B517005EB5D2 /* SecretsVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33E0B529C0B517005EB5D2 /* SecretsVault.swift */; };
 		4FBB7A3F29C9ECBD0057D822 /* DatadogStatic in Frameworks */ = {isa = PBXBuildFile; productRef = 4FBB7A3E29C9ECBD0057D822 /* DatadogStatic */; };
+		4FBB7A5D29CB559F0057D822 /* DatadogCrashReporting in Frameworks */ = {isa = PBXBuildFile; productRef = 4FBB7A5C29CB559F0057D822 /* DatadogCrashReporting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FBB7A5D29CB559F0057D822 /* DatadogCrashReporting in Frameworks */,
 				4FBB7A3F29C9ECBD0057D822 /* DatadogStatic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +119,7 @@
 			name = ExampleApp;
 			packageProductDependencies = (
 				4FBB7A3E29C9ECBD0057D822 /* DatadogStatic */,
+				4FBB7A5C29CB559F0057D822 /* DatadogCrashReporting */,
 			);
 			productName = DataDogExampleApp;
 			productReference = 4F33E09F29C0AFEC005EB5D2 /* ExampleApp.app */;
@@ -396,6 +399,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4F573BAF29C9E917005B0804 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */;
 			productName = DatadogStatic;
+		};
+		4FBB7A5C29CB559F0057D822 /* DatadogCrashReporting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F573BAF29C9E917005B0804 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */;
+			productName = DatadogCrashReporting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

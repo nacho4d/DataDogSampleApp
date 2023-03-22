@@ -7,6 +7,7 @@
 
 import Foundation
 import Datadog
+import DatadogCrashReporting
 
 /// Logger and Crash report getter tool for analysis
 class AnalyticsLogger {
@@ -30,6 +31,7 @@ class AnalyticsLogger {
                 .trackUIKitRUMViews()
                 .trackUIKitRUMActions()
                 .trackRUMLongTasks()
+                .enableCrashReporting(using: DDCrashReportingPlugin())
                 .build()
         )
 
@@ -44,7 +46,7 @@ class AnalyticsLogger {
             .sendNetworkInfo(true)
             .sendLogsToDatadog(true)
             .set(loggerName: "Analytics")
-            .set(serviceName: "ExampleApp")
+            .set(serviceName: "CrashingApp")
             .printLogsToConsole(true, usingFormat: .shortWith(prefix: "[Datadog] "))
             .build()
     }
