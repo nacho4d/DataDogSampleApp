@@ -36,6 +36,9 @@ struct SecretsVault {
 }
 
 extension SecretsVault {
+    var dataDogRumApplicationId: String {
+        unsalt(saltedValue: storage["dataDogRumApplicationId"]!)
+    }
     var datadogClientToken: String {
         unsalt(saltedValue: storage["datadogClientToken"]!)
     }

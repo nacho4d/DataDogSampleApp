@@ -17,14 +17,24 @@ class AnalyticsLogger {
 
     /// Initializer
     init() {
-        /// Initialize Datadog
+        /// Initialize Datadog for RUM
         Datadog.initialize(
             appContext: .init(),
             trackingConsent: .granted,
             configuration: Datadog.Configuration
-                .builderUsing(clientToken: SecretsVault.current.datadogClientToken, environment: "dev1")
+                .builderUsing(
+                    rumApplicationID: SecretsVault.current.dataDogRumApplicationId,
+                    clientToken: SecretsVault.current.datadogClientToken,
+                    environment: SecretsVault.current.datadogEnvironment
+                )
+                .trackUIKitRUMViews()
+                .trackUIKitRUMActions()
+                .trackRUMLongTasks()
                 .build()
         )
+
+        /// Initialize RUM
+        Global.rum = RUMMonitor.initialize()
 
         /// For DEBUG only
         Datadog.verbosityLevel = .debug
