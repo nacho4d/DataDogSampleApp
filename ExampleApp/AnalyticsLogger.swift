@@ -26,6 +26,9 @@ class AnalyticsLogger {
                 .build()
         )
 
+        /// For DEBUG only
+        Datadog.verbosityLevel = .debug
+
         /// Initialize logger
         ddLogger = DDLogger.builder
             .sendNetworkInfo(true)
